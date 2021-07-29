@@ -24,8 +24,6 @@ open class MarkdownItalic: MarkdownCommonElement {
   }
     
   public func match(_ match: NSTextCheckingResult, attributedString: NSMutableAttributedString) {
-    attributedString.deleteCharacters(in: match.range(at: 4))
-
     let currentAttributes = attributedString.attributes(
       at: match.range(at: 3).location,
       longestEffectiveRange: nil,
@@ -41,7 +39,5 @@ open class MarkdownItalic: MarkdownCommonElement {
         range: match.range(at: 3)
       )
     }
-
-    attributedString.deleteCharacters(in: match.range(at: 2))
   }
 }

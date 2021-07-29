@@ -31,7 +31,7 @@ open class MarkdownHeader: MarkdownLevelElement {
   }
 
   open func formatText(_ attributedString: NSMutableAttributedString, range: NSRange, level: Int) {
-      attributedString.deleteCharacters(in: range)
+//      attributedString.deleteCharacters(in: range)
   }
 
     open func attributesForLevel(_ level: Int) -> [NSAttributedString.Key: AnyObject] {
